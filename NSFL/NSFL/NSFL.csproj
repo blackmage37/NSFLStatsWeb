@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -174,6 +175,7 @@
     <Content Include="Scripts\d3\API.md" />
     <None Include="Properties\PublishProfiles\NSFLStats - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\NSFLStats - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\NSFLTPETracker - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\DataTables\buttons.flash.min.js" />
     <Content Include="Scripts\DataTables\buttons.html5.min.js" />
@@ -200,8 +202,8 @@
     <Content Include="Team Files\BHTeam.txt" />
     <Content Include="Team Files\CYPlayers.txt" />
     <Content Include="Team Files\CYTeam.txt" />
-    <Content Include="Team Files\LVLPlayers.txt" />
-    <Content Include="Team Files\LVLTeam.txt" />
+    <Content Include="Team Files\NOPlayers.txt" />
+    <Content Include="Team Files\NOTeam.txt" />
     <Content Include="Team Files\OCOPlayers.txt" />
     <Content Include="Team Files\OCOTeam.txt" />
     <Content Include="Team Files\PLPlayers.txt" />
