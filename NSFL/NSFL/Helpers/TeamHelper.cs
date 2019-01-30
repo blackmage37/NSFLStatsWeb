@@ -17,7 +17,7 @@ namespace NSFL.Helpers
             teamPrefixes[0] = "AO";
             teamPrefixes[1] = "BH";
             teamPrefixes[2] = "CY";
-            teamPrefixes[3] = "LVL";
+            teamPrefixes[3] = "NO";
             teamPrefixes[4] = "OCO";
             teamPrefixes[5] = "PL";
             teamPrefixes[6] = "SJS";
@@ -44,8 +44,8 @@ namespace NSFL.Helpers
             if (prefix == "AO") { return "Arizona Outlaws"; }
             if (prefix == "BH") { return "Baltimore Hawks"; }
             if (prefix == "CY") { return "Colorado Yeti"; }
-            if (prefix == "LVL") { return "Las Vegas Legion"; }
-            if (prefix == "OCO") { return "Orange County Otter"; }
+            if (prefix == "NO") { return "New Orleans Second Line"; }
+            if (prefix == "OCO") { return "Orange County Otters"; }
             if (prefix == "PL") { return "Philadelphia Liberty"; }
             if (prefix == "SJS") { return "San Jose SaberCats"; }
             if (prefix == "YW") { return "Yellowknife Wraiths"; }
