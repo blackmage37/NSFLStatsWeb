@@ -21,7 +21,15 @@ namespace NSFL.Helpers
 
                 player.PlayerSeasonDrafted = playerFileLine.PlayerLine.Split(')')[0].Replace("(", "").Trim();
 
-                if (playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ').Length > 1)
+                // if the player has a three word name
+                if (playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ').Length > 2)
+                {
+                    player.PlayerFirstName = playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ')[0].Trim();
+                    player.PlayerFirstName = player.PlayerFirstName + " " + playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ')[1].Trim();
+                    player.PlayerLastName = playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ')[2].Trim();
+                }
+                // standard firstname lastname
+                else if (playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ').Length > 1)
                 {
                     player.PlayerFirstName = playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ')[0].Trim();
                     player.PlayerLastName = playerFileLine.PlayerLine.Split('-')[1].Trim().Split(' ')[1].Trim();
