@@ -9,7 +9,7 @@ namespace NSFL.Helpers
     public static class TeamHelper
     {
         public const string TEAMFILESPATH = @"~/Team Files/";
-        public const int TEAMCOUNT = 8;
+        public const int TEAMCOUNT = 9;
 
         public static string[] GetTeamPrefixes()
         {
@@ -22,6 +22,7 @@ namespace NSFL.Helpers
             teamPrefixes[5] = "PL";
             teamPrefixes[6] = "SJS";
             teamPrefixes[7] = "YW";
+            teamPrefixes[8] = "FA";
 
             return teamPrefixes;
         }
@@ -49,6 +50,7 @@ namespace NSFL.Helpers
             if (prefix == "PL") { return "Philadelphia Liberty"; }
             if (prefix == "SJS") { return "San Jose SaberCats"; }
             if (prefix == "YW") { return "Yellowknife Wraiths"; }
+            if (prefix == "FA") { return "Free Agents"; }
 
             return "";
         }
