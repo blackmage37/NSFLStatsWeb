@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSFL", "NSFL\NSFL.csproj", "{91EE21BB-6D53-4C15-8806-04DDC01AFE4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSFLStatsWebTests", "NSFLStatsWebTests\NSFLStatsWebTests.csproj", "{FAAEDB7E-518B-46C5-902A-C7D53BF56740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{91EE21BB-6D53-4C15-8806-04DDC01AFE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91EE21BB-6D53-4C15-8806-04DDC01AFE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91EE21BB-6D53-4C15-8806-04DDC01AFE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAEDB7E-518B-46C5-902A-C7D53BF56740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAEDB7E-518B-46C5-902A-C7D53BF56740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAEDB7E-518B-46C5-902A-C7D53BF56740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAEDB7E-518B-46C5-902A-C7D53BF56740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91A0A69A-EA9F-48F2-97ED-8D9D066691CD}
 	EndGlobalSection
 EndGlobal

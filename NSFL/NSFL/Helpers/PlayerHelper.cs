@@ -17,7 +17,7 @@ namespace NSFL.Helpers
                 if (playerFileLine.PlayerLine.Split('-').Length < 2 || playerFileLine.PlayerLine.Split(',').Length < 2 || !playerFileLine.PlayerLine.Trim().StartsWith("("))
                 {
                     return new Player(); // Probably an inconsistenly formatted roster title or announcement
-                } else if (playerFileLine.PlayerLine.Split('-').Length > 2)
+                } else if (playerFileLine.PlayerLine.Split('-').Length > 3)
                 {
                     // this would suggest there is probably a hyphen in the player name
                     
