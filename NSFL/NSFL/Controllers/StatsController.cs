@@ -23,6 +23,7 @@ namespace NSFL.Controllers
             var viewModel = new TeamTPEViewModel();
             viewModel.Teams = new List<TeamViewModel>();
             viewModel.AllPlayers = new List<PlayerViewModel>();
+            viewModel.lastUpdated = DateTimeHelper.GetDateTimeFromFile(@"~/Team Files/record.json");
 
             var playerFiles = TeamHelper.GetTeamPlayerFiles();
             foreach (var file in playerFiles)

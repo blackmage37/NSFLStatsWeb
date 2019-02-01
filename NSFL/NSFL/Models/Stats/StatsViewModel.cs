@@ -10,5 +10,8 @@ namespace NSFL.Models.Stats
         public List<Team.TeamViewModel> Teams { get; set; }
 
         public List<Player.PlayerViewModel> AllPlayers { get; set; }
+
+        public string lastUpdated { get; set; }
+
     }
 }
