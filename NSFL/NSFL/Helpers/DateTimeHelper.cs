@@ -13,7 +13,7 @@ namespace NSFL.Helpers
         public static string GetDateTimeFromFile(string file)
         {
             string[] sDateTime = System.IO.File.ReadAllLines(System.Web.HttpContext.Current.Server.MapPath(file));
-
+            sDateTime[0] = sDateTime[0].Replace(";", "");
             return sDateTime[0];
         }
 

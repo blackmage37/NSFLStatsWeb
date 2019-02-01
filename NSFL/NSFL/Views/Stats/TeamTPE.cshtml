@@ -8,10 +8,11 @@
     <div class="col-sm-4">
         <h2>Index</h2>
         <h3>Player TPE</h3>
-        <br />TPE Last Updated: @Html.DisplayFor(model => model.lastUpdated);
-        <br />
+        TPE Last Updated: @Html.DisplayFor(model => model.lastUpdated);
     </div>
 </div>
+
+<br />&nbsp;<br />
 
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -43,92 +44,12 @@
                                 @foreach (var player in Model.AllPlayers)
                                 {
                                     var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(teamPlayer => player.TeamName)
-                                    </td>
-                                    <td>
-                                        <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(teamPlayer => player.PlayerPosition)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(teamPlayer => player.PlayerTPE)
-                                    </td>
-                                </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-sm-4">
-        <h3>Team TPE</h3>
-    </div>
-</div>
-
-@foreach (var team in Model.Teams)
-{
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="ibox float-e-margins">
-                <div class="ibox-content">
-
-                    <dl class="dl-vertical">
-                        <dt>
-                            @Html.DisplayNameFor(model => team.TeamName)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => team.TeamName)
-                        </dd>
-
-                        <dt>
-                            @Html.DisplayNameFor(model => team.TeamTPE)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => team.TeamTPE)
-                        </dd>
-                    </dl>
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerSeasonDrafted)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerFullName)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerPosition)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerTPE)
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var player in team.Players)
-                                {
-                                    var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
-                                    //playerUrl = "http://nsfl.jcink.net/index.php?" + playerUrl.Split('&').Last();
                                     <tr>
                                         <td>
                                             @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(teamPlayer => player.TeamName)
                                         </td>
                                         <td>
                                             <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
@@ -149,6 +70,86 @@
         </div>
     </div>
 </div>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h3>Team TPE</h3>
+    </div>
+</div>
+
+@foreach (var team in Model.Teams)
+{
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+
+                        <dl class="dl-vertical">
+                            <dt>
+                                @Html.DisplayNameFor(model => team.TeamName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => team.TeamName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => team.TeamTPE)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => team.TeamTPE)
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerSeasonDrafted)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerFullName)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerPosition)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerTPE)
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var player in team.Players)
+                                    {
+                                        var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
+                                        //playerUrl = "http://nsfl.jcink.net/index.php?" + playerUrl.Split('&').Last();
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
+                                            </td>
+                                            <td>
+                                                <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(teamPlayer => player.PlayerPosition)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(teamPlayer => player.PlayerTPE)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 
 @section Scripts {
