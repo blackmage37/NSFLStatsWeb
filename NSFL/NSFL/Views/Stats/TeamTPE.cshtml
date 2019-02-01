@@ -8,7 +8,8 @@
     <div class="col-sm-4">
         <h2>Index</h2>
         <h3>Player TPE</h3>
-        <br />TPE Last Updated: @Html.DisplayNameFor(model => model.lastUpdated);
+        <br />TPE Last Updated: @Html.DisplayFor(model => model.lastUpdated);
+        <br />
     </div>
 </div>
 
@@ -26,9 +27,6 @@
                                     </th>
                                     <th>
                                         @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().TeamName)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerID)
                                     </th>
                                     <th>
                                         @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerFullName)
@@ -51,9 +49,6 @@
                                     </td>
                                     <td>
                                         @Html.DisplayFor(teamPlayer => player.TeamName)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(teamPlayer => player.PlayerID)
                                     </td>
                                     <td>
                                         <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
