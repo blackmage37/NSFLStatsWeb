@@ -123,7 +123,7 @@
                                 @foreach (var player in team.Players)
                                 {
                                     var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
-                                    playerUrl = "http://nsfl.jcink.net/index.php?" + playerUrl.Split('&').Last();
+                                    //playerUrl = "http://nsfl.jcink.net/index.php?" + playerUrl.Split('&').Last();
                                     <tr>
                                         <td>
                                             @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)

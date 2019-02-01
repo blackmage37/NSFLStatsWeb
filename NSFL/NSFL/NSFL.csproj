@@ -210,6 +210,8 @@
     <Content Include="Team Files\PLTeam.txt" />
     <Content Include="Team Files\SJSPlayers.txt" />
     <Content Include="Team Files\SJSTeam.txt" />
+    <Content Include="Team Files\FATeam.txt" />
+    <Content Include="Team Files\FAPlayers.txt" />
     <Content Include="Team Files\YWPlayers.txt" />
     <Content Include="Team Files\YWTeam.txt" />
     <Content Include="Web.config" />

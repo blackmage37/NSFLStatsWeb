@@ -50,7 +50,7 @@ namespace NSFL.Helpers
             if (prefix == "PL") { return "Philadelphia Liberty"; }
             if (prefix == "SJS") { return "San Jose SaberCats"; }
             if (prefix == "YW") { return "Yellowknife Wraiths"; }
-            if (prefix == "FA") { return "Free Agent"; }
+            if (prefix == "FA") { return "Free Agents"; }
 
             return "";
         }
