@@ -228,6 +228,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Stats\PlayerTPE.cshtml" />
     <Content Include="Views\Stats\TeamTPE.cshtml" />
+    <Content Include="Team Files\record.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

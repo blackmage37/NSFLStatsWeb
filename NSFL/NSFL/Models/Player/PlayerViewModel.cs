@@ -24,6 +24,9 @@ namespace NSFL.Models.Player
         [DisplayName("TPE")]
         public int PlayerTPE { get; set; }
 
+        [DisplayName("ID")]
+        public int PlayerID { get; set; }
+
         [MaxLength(2)]
         [DisplayName("Position")]
         public string PlayerPosition { get; set; }

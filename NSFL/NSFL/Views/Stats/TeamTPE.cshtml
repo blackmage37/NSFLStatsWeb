@@ -8,6 +8,7 @@
     <div class="col-sm-4">
         <h2>Index</h2>
         <h3>Player TPE</h3>
+        <br />TPE Last Updated: 2019-02-01 10:03
     </div>
 </div>
 
@@ -27,6 +28,9 @@
                                         @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().TeamName)
                                     </th>
                                     <th>
+                                        @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerID)
+                                    </th>
+                                    <th>
                                         @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerFullName)
                                     </th>
                                     <th>
@@ -41,23 +45,26 @@
                                 @foreach (var player in Model.AllPlayers)
                                 {
                                     var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(teamPlayer => player.TeamName)
-                                        </td>
-                                        <td>
-                                            <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
-</td>
-                                        <td>
-                                            @Html.DisplayFor(teamPlayer => player.PlayerPosition)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(teamPlayer => player.PlayerTPE)
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(teamPlayer => player.TeamName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(teamPlayer => player.PlayerID)
+                                    </td>
+                                    <td>
+                                        <a href="@playerUrl" target="_blank">@Html.DisplayFor(teamPlayer => player.PlayerFullName)</a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(teamPlayer => player.PlayerPosition)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(teamPlayer => player.PlayerTPE)
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

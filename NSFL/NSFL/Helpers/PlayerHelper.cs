@@ -37,34 +37,46 @@ namespace NSFL.Helpers
                     pLine = playerFileLine.PlayerLine.Split('-');
                 }
 
+                // create new player instance, with draft season
                 var player = new Player
                 {
                     PlayerSeasonDrafted = playerFileLine.PlayerLine.Split(')')[0].Replace("(", "").Trim()
                 };
+                
+                // get the player name
+                
+                    // if the player has a three word name
+                    if (pLine[1].Trim().Split(' ').Length > 2)
+                    {
+                        player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
+                        player.PlayerFirstName = player.PlayerFirstName + " " + pLine[1].Trim().Split(' ')[1].Trim();
+                        player.PlayerLastName = pLine[1].Trim().Split(' ')[2].Trim();
+                    }
+                    // standard firstname lastname
+                    else if (pLine[1].Trim().Split(' ').Length > 1)
+                    {
+                        player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
+                        player.PlayerLastName = pLine[1].Trim().Split(' ')[1].Trim();
+                    }
+                    else // A last name is not required, prevent this player from being ommitted
+                    {
+                        player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
+                        player.PlayerLastName = "";
+                    }
 
-                // if the player has a three word name
-                if (pLine[1].Trim().Split(' ').Length > 2)
-                {
-                    player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
-                    player.PlayerFirstName = player.PlayerFirstName + " " + pLine[1].Trim().Split(' ')[1].Trim();
-                    player.PlayerLastName = pLine[1].Trim().Split(' ')[2].Trim();
-                }
-                // standard firstname lastname
-                else if (pLine[1].Trim().Split(' ').Length > 1)
-                {
-                    player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
-                    player.PlayerLastName = pLine[1].Trim().Split(' ')[1].Trim();
-                }
-                else // A last name is not required, prevent this player from being ommitted
-                {
-                    player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
-                    player.PlayerLastName = "";
-                }
+                // get TPE, Position and URL
                 player.PlayerTPE = int.Parse(playerFileLine.PlayerLine.Split(',')[1].Split(':').Last().Trim());
                 player.PlayerPosition = pLine.Last().Split(',')[0].Trim();
                 player.PlayerProfileURL = playerFileLine.PlayerLine.Split(',')[2].Trim();
 
+                // get the player ID (thread ID on the forum)
+                if (int.TryParse(player.PlayerProfileURL.Split('=').Last().Trim(), out int iPID))
+                {
+                    player.PlayerID = iPID;
+                }
+
                 return player;
+
             }
             catch
             {
