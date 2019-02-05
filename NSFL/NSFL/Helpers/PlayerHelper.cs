@@ -16,7 +16,11 @@ namespace NSFL.Helpers
             {
                 if (playerFileLine.PlayerLine.Split('-').Length < 2 || playerFileLine.PlayerLine.Split(',').Length < 2 || !playerFileLine.PlayerLine.Trim().StartsWith("("))
                 {
-                    return new Player(); // Probably an inconsistenly formatted roster title or announcement
+                    // Probably an inconsistenly formatted roster title or announcement
+                    // TODO: use regex to check format of thread title, take the link and add to a separate array for easier error location
+                    //       then print that array on an error page, with the links
+                    return new Player(); 
+
                 } else if (playerFileLine.PlayerLine.Split('-').Length > 3)
                 {
                     // this would suggest there is probably a hyphen in the player name
