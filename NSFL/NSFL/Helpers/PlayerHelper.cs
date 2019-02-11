@@ -70,7 +70,7 @@ namespace NSFL.Helpers
 
                 // get TPE, Position and URL
                 player.PlayerTPE = int.Parse(playerFileLine.PlayerLine.Split(',')[1].Split(':').Last().Trim());
-                player.PlayerPosition = pLine.Last().Split(',')[0].Trim();
+                player.PlayerPosition = PositionHelper.GetPositionFromAbbrev(pLine.Last().Split(',')[0].Trim());
                 player.PlayerProfileURL = playerFileLine.PlayerLine.Split(',')[2].Trim();
 
                 // get the player ID (thread ID on the forum)

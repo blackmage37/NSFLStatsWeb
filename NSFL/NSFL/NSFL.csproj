@@ -144,6 +144,7 @@
     </Compile>
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\PlayerHelper.cs" />
+    <Compile Include="Helpers\PositionHelper.cs" />
     <Compile Include="Helpers\TeamHelper.cs" />
     <Compile Include="Models\Player\PlayerModel.cs" />
     <Compile Include="Models\Player\PlayerViewModel.cs" />

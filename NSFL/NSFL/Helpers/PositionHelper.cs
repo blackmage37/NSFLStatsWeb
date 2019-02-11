@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -48,7 +48,7 @@ namespace NSFL.Helpers
             }
 
             return playerPositions;
-            
+
         }
 
         public static string GetPositionFromAbbrev(string abbrev)
