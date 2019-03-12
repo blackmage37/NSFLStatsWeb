@@ -46,6 +46,7 @@ namespace NSFL.Controllers
                         }
 
                         var player = new PlayerViewModel();
+                        player.PlayerID = playerData.PlayerID;
                         player.PlayerFirstName = playerData.PlayerFirstName;
                         player.PlayerLastName = playerData.PlayerLastName;
                         player.PlayerPosition = playerData.PlayerPosition;
