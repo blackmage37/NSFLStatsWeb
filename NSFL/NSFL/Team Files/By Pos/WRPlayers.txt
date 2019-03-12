@@ -1,6 +1,6 @@
 S14 Offseason Schedule,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=12414,
 Recruitment TPE Changed,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=8812,
-(S15) - Cedric Parker - WR,Create a Player, http://nsfl.jcink.net/index.php?showtopic=12471,
+(S15) - Cedric Parker - WR,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=12471,
 (S15) - Charles Mudley - WR,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=12272,
 (S15) - Carlomagno Rey - WR,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=12371,
 (S15) - Dashwan Jackson - WR,TPE: 50, http://nsfl.jcink.net/index.php?showtopic=12322,
