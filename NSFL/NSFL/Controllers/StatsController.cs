@@ -58,14 +58,14 @@ namespace NSFL.Controllers
                         viewModel.AllPlayers.Add(player);
                     }
 
-                    var teamTPE = 0;
+                    //var teamTPE = 0;
 
                     // TODO: convert this to read from the team file rather than using another loop to calculate
-                    foreach (var player in team.Players)
-                    {
-                        teamTPE += player.PlayerTPE;
-                    }
-                    team.TeamTPE = teamTPE;
+                    //foreach (var player in team.Players)
+                    //{
+                    //    teamTPE += player.PlayerTPE;
+                    //}
+                    //team.TeamTPE = teamTPE;
 
                     viewModel.Teams.Add(team);
                 }
