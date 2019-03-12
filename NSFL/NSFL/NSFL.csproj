@@ -178,6 +178,8 @@
     <None Include="Properties\PublishProfiles\NSFLStats - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\NSFLStats - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NSFLTPETracker - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TPETracker - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\TPETracker - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\DataTables\buttons.flash.min.js" />
     <Content Include="Scripts\DataTables\buttons.html5.min.js" />
