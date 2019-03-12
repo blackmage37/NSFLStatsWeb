@@ -24,6 +24,9 @@
                             <thead>
                                 <tr>
                                     <th>
+                                        @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerID)
+                                    </th>
+                                    <th>
                                         @Html.DisplayNameFor(model => Model.AllPlayers.FirstOrDefault().PlayerSeasonDrafted)
                                     </th>
                                     <th>
@@ -45,6 +48,9 @@
                                 {
                                     var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
                                     <tr>
+                                        <td>
+                                            @Html.DisplayFor(teamPlayer => player.PlayerID)
+                                        </td>
                                         <td>
                                             @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
                                         </td>
@@ -94,13 +100,13 @@
                                 @Html.DisplayFor(model => team.TeamName)
                             </dd>
 
-                            <dt>
+                            @*<dt>
                                 @Html.DisplayNameFor(model => team.TeamTPE)
                             </dt>
 
                             <dd>
                                 @Html.DisplayFor(model => team.TeamTPE)
-                            </dd>
+                            </dd>*@
                         </dl>
                     </div>
                     <div class="ibox-content">
@@ -108,6 +114,9 @@
                             <table class="table table-striped table-bordered table-hover dataTables">
                                 <thead>
                                     <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerID)
+                                        </th>
                                         <th>
                                             @Html.DisplayNameFor(model => team.Players.FirstOrDefault().PlayerSeasonDrafted)
                                         </th>
@@ -128,6 +137,9 @@
                                         var playerUrl = player.PlayerProfileURL.Replace("&amp;", "&");
                                         //playerUrl = "http://nsfl.jcink.net/index.php?" + playerUrl.Split('&').Last();
                                         <tr>
+                                            <td>
+                                                @Html.DisplayFor(teamPlayer => player.PlayerID)
+                                            </td>
                                             <td>
                                                 @Html.DisplayFor(teamPlayer => player.PlayerSeasonDrafted)
                                             </td>

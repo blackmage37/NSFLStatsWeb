@@ -13,8 +13,8 @@ namespace NSFL.Models.Team
         [DisplayName("Team name")]
         public string TeamName { get; set; }
 
-        [DisplayName("Team TPE")]
-        public int TeamTPE { get; set; }
+        //[DisplayName("Team TPE")]
+        //public int TeamTPE { get; set; }
 
         [DisplayName("Players")]
         public List<Player.PlayerViewModel> Players { get; set; }

@@ -55,8 +55,12 @@ namespace NSFL.Helpers
             return "";
         }
 
+        // removed team tpe for the time being; needs reworking to be properly functional
+        // currently relies too heavily on correct thread title format on forum
+        /*
         public static string[] GetTeamTPEFiles()
         {
+
             var teamFiles = new string[TEAMCOUNT];
             var prefixes = GetTeamPrefixes();
 
@@ -67,5 +71,6 @@ namespace NSFL.Helpers
 
             return teamFiles;
         }
+        */
     }
 }
