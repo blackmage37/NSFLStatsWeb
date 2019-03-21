@@ -10,6 +10,7 @@ namespace NSFL.Helpers
     {
         public const string TEAMFILESPATH = @"~/Team Files/";
         public const int TEAMCOUNT = 26;
+//        public const int TEAMCOUNT = 9;             // use this to import NSFL only
 
         public static string[] GetTeamPrefixes()
         {
@@ -24,6 +25,8 @@ namespace NSFL.Helpers
             teamPrefixes[7] = "YW";
             teamPrefixes[8] = "FA";
 
+            
+             
             teamPrefixes[9] = "SA";
             teamPrefixes[10] = "KC";
             teamPrefixes[11] = "TL";
@@ -42,6 +45,8 @@ namespace NSFL.Helpers
             teamPrefixes[23] = "CB";
             teamPrefixes[24] = "SF";
             teamPrefixes[25] = "KP";
+            
+             
 
             return teamPrefixes;
         }
