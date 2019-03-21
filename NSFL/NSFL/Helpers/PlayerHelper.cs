@@ -46,15 +46,39 @@ namespace NSFL.Helpers
                 {
                     PlayerSeasonDrafted = playerFileLine.PlayerLine.Split(')')[0].Replace("(", "").Trim()
                 };
-                
-                // get the player name
-                
-                    // if the player has a three word name
-                    if (pLine[1].Trim().Split(' ').Length > 2)
+
+                // get the player name (and remove the nickname if there is one)
+                if (pLine[1].IndexOf("&quot;") > 0)
+                {
+
+                    // find the start and end of the nickname part
+                    int pStart = pLine[1].IndexOf("&quot;");
+                    int pEnd = pLine[1].IndexOf("&quot;", pStart + 6);
+
+                    // isolate the nickname part
+                    string extract = pLine[1].Substring(pStart, pEnd - pStart + 7);
+
+                    // remove it
+                    pLine[1] = pLine[1].Replace(extract, "");
+
+                }
+
+                // if the player has a name longer than two words
+                if (pLine[1].Trim().Split(' ').Length > 2)
                     {
+
+                        // put first two "names" into first name
                         player.PlayerFirstName = pLine[1].Trim().Split(' ')[0].Trim();
                         player.PlayerFirstName = player.PlayerFirstName + " " + pLine[1].Trim().Split(' ')[1].Trim();
+                                        
+                        // all others into last name
                         player.PlayerLastName = pLine[1].Trim().Split(' ')[2].Trim();
+
+                        for (int i = 2; i < pLine[1].Trim().Split(' ').Length; i++)
+                        {
+                            player.PlayerLastName = player.PlayerLastName + " " + pLine[1].Trim().Split(' ')[i + 1].Trim();
+                        }
+
                     }
                     // standard firstname lastname
                     else if (pLine[1].Trim().Split(' ').Length > 1)
