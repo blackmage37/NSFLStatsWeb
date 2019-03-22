@@ -6,6 +6,6 @@ I'll add more info later.
 
 Planned future developments:
 * Store data in a database
-** implement historic lookups
+  * implement historic lookups
 * Restore the Team TPE calculation, taking the figures from the parsed data rather than separate files
 * Add other stats from the league index
