@@ -200,6 +200,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\NSFLStats\TeamTPE.js" />
+    <Content Include="Team Files\AllPlayers.txt" />
     <Content Include="Team Files\By Pos\CBPlayers.txt" />
     <Content Include="Team Files\By Pos\DEPlayers.txt" />
     <Content Include="Team Files\By Pos\DTPlayers.txt" />
@@ -241,6 +242,7 @@
     <Content Include="Views\Stats\PlayerTPE.cshtml" />
     <Content Include="Views\Stats\TeamTPE.cshtml" />
     <Content Include="Team Files\record.json" />
+    <Content Include="Team Files\AllPlayersCheck.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
