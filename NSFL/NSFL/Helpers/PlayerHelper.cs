@@ -74,7 +74,8 @@ namespace NSFL.Helpers
                         // all others into last name
                         player.PlayerLastName = pLine[1].Trim().Split(' ')[2].Trim();
 
-                        for (int i = 2; i < pLine[1].Trim().Split(' ').Length; i++)
+                        // start the loop at the fourth item, if there is one
+                        for (int i = 2; i < pLine[1].Trim().Split(' ').Length - 1; i++)
                         {
                             player.PlayerLastName = player.PlayerLastName + " " + pLine[1].Trim().Split(' ')[i + 1].Trim();
                         }
