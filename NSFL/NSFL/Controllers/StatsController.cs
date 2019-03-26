@@ -4,9 +4,6 @@ using NSFL.Models.Stats;
 using NSFL.Models.Team;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace NSFL.Controllers
@@ -77,7 +74,7 @@ namespace NSFL.Controllers
 
         public ActionResult PlayerTPE(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
