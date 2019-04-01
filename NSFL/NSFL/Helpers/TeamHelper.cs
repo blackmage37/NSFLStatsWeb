@@ -5,7 +5,8 @@ namespace NSFL.Helpers
     public static class TeamHelper
     {
         public const string TEAMFILESPATH = @"~/Team Files/";
-        public const int TEAMCOUNT = 26;
+//        public const int TEAMCOUNT = 26;
+        public const int TEAMCOUNT = 15;             // use this to import NSFL & DSFL only
 //        public const int TEAMCOUNT = 9;             // use this to import NSFL only
 
         public static string[] GetTeamPrefixes()
@@ -29,7 +30,8 @@ namespace NSFL.Helpers
             teamPrefixes[12] = "PO";
             teamPrefixes[13] = "NS";
             teamPrefixes[14] = "PB";
-
+        
+        /*
             teamPrefixes[15] = "QB";
             teamPrefixes[16] = "RB";
             teamPrefixes[17] = "WR";
@@ -41,8 +43,7 @@ namespace NSFL.Helpers
             teamPrefixes[23] = "CB";
             teamPrefixes[24] = "SF";
             teamPrefixes[25] = "KP";
-            
-             
+        */   
 
             return teamPrefixes;
         }
