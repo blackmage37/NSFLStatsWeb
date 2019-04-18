@@ -175,9 +175,6 @@
     <Content Include="Scripts\d3\LICENSE" />
     <Content Include="Scripts\d3\CHANGES.md" />
     <Content Include="Scripts\d3\API.md" />
-    <None Include="Properties\PublishProfiles\NSFLStats - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\NSFLStats - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\NSFLTPETracker - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TPETracker - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\TPETracker - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
